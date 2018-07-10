@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>TP2</name><open>1</open><description>ENGG4810 - KML Sensor Data Visualisation</description><Style id="yellowLineGreenPoly"><LineStyle><color>7f00ffff</color><width>4</width></LineStyle><PolyStyle><color>7f00ff00</color></PolyStyle></Style><Style id="sunIconForUVData"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/pal4/icon33.png</href></Icon></IconStyle></Style><Folder><name>Paths</name><description>Absolute Extruded Path visualizes data in order of reading</description><Placemark><name>Temperature</name><description>Height represents magnitude of data recordedmagnitude of temperature</description><LookAt><longitude>153.016389</longitude><latitude>-27.500278</latitude><altitude>10</altitude><heading>-100</heading><tilt>44</tilt><range>300</range></LookAt><styleUrl>#yellowLineGreenPoly</styleUrl><LineString><extrude>1</extrude><tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode><coordinates> 153.01653,-27.50036,036</coordinates></LineString></Placemark><Placemark><name>Humidity</name><description>Height represents magnitude of data recordedmagnitude of temperature</description><LookAt><longitude>153.016389</longitude><latitude>-27.500278</latitude><altitude>10</altitude><heading>-100</heading><tilt>44</tilt><range>300</range></LookAt><styleUrl>#yellowLineGreenPoly</styleUrl><LineString><extrude>1</extrude><tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode><coordinates> 153.01653,-27.50036,080</coordinates></LineString></Placemark><Placemark><name>RSSI</name><description>Height represents magnitude of data recordedmagnitude of RSSI</description><LookAt><longitude>153.016389</longitude><latitude>-27.500278</latitude><altitude>10</altitude><heading>-100</heading><tilt>44</tilt><range>300</range></LookAt><styleUrl>#yellowLineGreenPoly</styleUrl><LineString><extrude>1</extrude><tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode><coordinates> 153.01653,-27.50036,073</coordinates></LineString></Placemark><Placemark><name>UV</name><description>Height represents magnitude of data recordedwhether data was collected inside or outside</description><LookAt><longitude>153.016389</longitude><latitude>-27.500278</latitude><altitude>10</altitude><heading>-100</heading><tilt>44</tilt><range>300</range></LookAt><styleUrl>#yellowLineGreenPoly</styleUrl><LineString><extrude>1</extrude><tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode><coordinates> 153.01653,-27.50036,inside</coordinates></LineString></Placemark><Placemark><name>Battery Voltage</name><description>Height represents magnitude of data recordedmagnitude of battery voltage</description><LookAt><longitude>153.016389</longitude><latitude>-27.500278</latitude><altitude>10</altitude><heading>-100</heading><tilt>44</tilt><range>300</range></LookAt><styleUrl>#yellowLineGreenPoly</styleUrl><LineString><extrude>1</extrude><tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode><coordinates> 153.01653,-27.50036,07.7</coordinates></LineString></Placemark><Placemark><name>Skipped Measurements</name><description>Height represents magnitude of data recordedmagnitude of skipped measures at that location</description><LookAt><longitude>153.016389</longitude><latitude>-27.500278</latitude><altitude>10</altitude><heading>-100</heading><tilt>44</tilt><range>300</range></LookAt><styleUrl>#yellowLineGreenPoly</styleUrl><LineString><extrude>1</extrude><tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode><coordinates> 153.01653,-27.50036,0</coordinates></LineString></Placemark></Folder><Folder><name>Points</name><description>Raw sesnor data included in placemark for each location that data was recorded at. Simple tessellated path connects location points in the order they were generated.</description><Placemark><name>Tessellated</name><description>Tessellated path connecting points</description><LookAt><longitude>153.016389</longitude><latitude>-27.500278</latitude><altitude>10</altitude><heading>-100</heading><tilt>44</tilt><range>300</range></LookAt><styleUrl/><LineString><extrude>1</extrude><tessellate>1</tessellate><altitudeMode>relativeToGround</altitudeMode><coordinates> 153.01653,-27.50036,0</coordinates></LineString></Placemark><Placemark><name>Placemark</name><description>Placemark = 0&#13;
+TimeStamp = 13:30:15&#13;
+Longitude = 153.01653&#13;
+Latitude = -27.50036&#13;
+Temperature = 036C&#13;
+Humidity = 080%&#13;
+UVA/UVB = inside&#13;
+Battery voltage = 07.7%&#13;
+skipped packets = 0&#13;
+&#13;
+GPS Lock = true&#13;
+GPS Disabled = false&#13;
+&#13;
+ssid = axon29&#13;
+bssid = 00-14-22-01-23-45&#13;
+rssi = 073&#13;
+&#13;
+ssid = eduroam&#13;
+bssid = 00-14-22-01-23-43&#13;
+rssi = 075&#13;
+&#13;
+ssid = uqwifi&#13;
+bssid = 00-14-22-01-23-41&#13;
+rssi = 072&#13;
+&#13;
+</description><styleUrl>#sunIconForUVData</styleUrl><Point><coordinates>153.01653,-27.50036</coordinates></Point></Placemark></Folder></Document></kml>

@@ -1,0 +1,40 @@
+please run this in cmd prompt with the command "java -jar engg4810g47.jar" so you can see it printing to the screen, 
+otherwise if it's run through a double click no output will be shown and it will be hard to see if it's working
+this way it can keep running indefinitely without wondering if it's closed
+
+NOTE: This program does function, i swear. 
+Test packets to run with mqtt.fx and show it does read. 
+Please just smash that 'publish' button to send as many times as possible (duplicates are ignored). 
+Feel free to send them in any order, it will auto order them.
+For some reason it doesn't respond to small amounts of packets.
+I have included a few test packets that can be sent from a mqtt spy program (mqtt.fx is what i used)
+
+
+
+Start with no gps lock
+47tp2,13:30:11,S2749.9950,E15301.6854,026,077,1,08.9,0,0,\r\naxon29,00-14-22-01-23-45,085,c726
+	
+then gps lock
+47tp2,13:30:15,S2750.0361,E15301.6535,036,080,0,07.7,1,0,axon29,00-14-22-01-23-45,073,eduroam,00-14-22-01-23-43,075,uqwifi,00-14-22-01-23-41,072,854
+	
+gps no lock
+47tp2,13:30:16,S2749.9950,E15301.6854,026,099,1,08.9,0,0,\r\naxon29,00-14-22-01-23-45,085,8d5e
+	
+gps lock
+47tp2,13:30:17,S2749.9950,E15301.6854,026,077,1,08.9,1,0,\r\naxon29,00-14-22-01-23-45,085,892d
+
+gps lock
+47tp2,13:30:19,S2750.0172,E15301.6695,029,078,0,08.4,1,0,\r\naxon29,00-14-22-01-23-45,075,54c8
+
+gps no lock
+47tp2,13:30:20,S2750.0455,E15301.7000,036,050,0,07.7,0,0,\r\naxon29,00-14-22-01-23-45,073,352
+
+invalid packets
+	bad checksum
+47tp2,13:30:20,S2750.0455,E15301.7000,036,080,0,07.7,1,0,\r\naxon29,00-14-22-01-23-45,073,ba4e
+
+
+I wrote a localization function, but it couldn't be properly tested because we didn't have a board to collect data (It does localize though).
+So I chose to not run it to show it functions in its most basic form properly. 
+
+program can be closed at any time, files are written as soon as novel data is read in.
