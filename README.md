@@ -1,12 +1,16 @@
-# ENGG4810 WiTracker - Team 47
+# WiTracker
 
-The WiTracker is an autonomous environment sensor module. As  the module moves, it collects information about the external environment relating to temperature, humidity, UV intensity and GPS positioning (among other things), while simultaneously scanning WiFi networks in the area. The data collected is stored in a packet which is transmitted through WiFi via MQTT when a connection is established. The data packet is able to be graphically displayed on a Google Earth map via a KML file. This interaction is handled under the software executable program.
+The WiTracker is an autonomous system for tracking the environment through a microcontroller with various sensors and displaying the collected information to visualise them graphically on Google Maps. As  the module moves, it collects information about the external environment relating to temperature, humidity, UV intensity and GPS positioning (among other things), while simultaneously scanning WiFi networks in the area. The data collected is stored in a packet which is transmitted through WiFi via MQTT when a connection is established. The data packet is able to be graphically displayed on a Google Earth map via a KML file. This interaction is handled under the software executable program.
+
+## Included
+
+Firmware for the microcontroller to collect data from an arduino and send over MQTT, and the software for collecting that data from MQTT and displaying it over google maps. 
 
 ## Getting Started
 
 To initiate device, ensure 3xAA batteries are inserted into the holder and the device is powered correctly (a LED light will blink). The module will begin recording measurements from sensors. Measurement time may be up to 20 seconds.
 
-Ensure device is within the Wifi bounds of the "Ax209" network to enable packet transmission. If device is not in Wifi range, the packet will be stored for transmission when "Ax209" is connected. 
+Ensure device is within the Wifi bounds of the network to enable packet transmission. If device is not in Wifi range, the packet will be stored for transmission when device is connected. 
 
 To view the transmitted packet data, open the software executable. [INSERT SOME SOFTWARE STUFF]
 
@@ -32,7 +36,7 @@ The data packets can be displayed according to the user's preferences.
 
 [DIFFERENT WAYS TO VIEW DATA?]
 
-###Code Styling Tests
+### Code Styling Tests
 
 The code was styled using the XXXXXXXX Tool:
 Link
