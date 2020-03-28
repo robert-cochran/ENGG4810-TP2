@@ -14,7 +14,7 @@ To view the transmitted packet data, open the software executable. [INSERT SOME 
 
 [THINGS YOU NEED TO INSTALL THE SOFTWARE]
 
-###Installing
+### Installing
 
 Follow the steps below for successful installation of SOFTWARE.exe.
 
@@ -24,11 +24,11 @@ Follow the steps below for successful installation of SOFTWARE.exe.
 
 Give an example here on how to access some simple data or something
 
-##Viewing the Packets
+## Viewing the Packets
 
 The data packets can be displayed according to the user's preferences. 
 
-###Packet Display Functions
+### Packet Display Functions
 
 [DIFFERENT WAYS TO VIEW DATA?]
 
@@ -38,9 +38,9 @@ The code was styled using the XXXXXXXX Tool:
 Link
 
 
-##Built With
+## Built With
 
-###Firmware:
+### Firmware:
 
 *   [ESP-IDF Toolchain](https://esp-idf.readthedocs.io/en/latest/# "Title") - Toolchain and IDE for ESP32 Thing Firmware Development
 *   [ESP32_weather](https://github.com/Ebiroll/esp32_weather/blob/master/LICENSE "Title") - Library for Si7021-A20 Temperature and Humidity reading
