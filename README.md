@@ -1,8 +1,8 @@
-#ENGG4810 WiTracker - Team 47
+# ENGG4810 WiTracker - Team 47
 
 The WiTracker is an autonomous environment sensor module. As  the module moves, it collects information about the external environment relating to temperature, humidity, UV intensity and GPS positioning (among other things), while simultaneously scanning WiFi networks in the area. The data collected is stored in a packet which is transmitted through WiFi via MQTT when a connection is established. The data packet is able to be graphically displayed on a Google Earth map via a KML file. This interaction is handled under the software executable program.
 
-##Getting Started
+## Getting Started
 
 To initiate device, ensure 3xAA batteries are inserted into the holder and the device is powered correctly (a LED light will blink). The module will begin recording measurements from sensors. Measurement time may be up to 20 seconds.
 
@@ -10,7 +10,7 @@ Ensure device is within the Wifi bounds of the "Ax209" network to enable packet 
 
 To view the transmitted packet data, open the software executable. [INSERT SOME SOFTWARE STUFF]
 
-###Prerequisites
+### Prerequisites
 
 [THINGS YOU NEED TO INSTALL THE SOFTWARE]
 
