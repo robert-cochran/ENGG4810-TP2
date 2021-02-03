@@ -1,6 +1,6 @@
 # GeoTracker
 
-The GeoTracker is an autonomous system for tracking the environment through a microcontroller with various sensors and displaying the collected information to visualise them graphically on Google Maps. As  the module moves, it collects information about the external environment relating to temperature, humidity, UV intensity and GPS positioning (among other things), while simultaneously scanning WiFi networks in the area. The data collected is stored in a packet which is transmitted through WiFi via MQTT when a connection is established. The data packet is able to be graphically displayed on a Google Earth map via a KML file. This interaction is handled under the software executable program.
+The GeoTracker displays informatioon sent through a microcontroller with various sensors to Google Earth in a KML file. As the microcontroller moves it collects information about the external environment (e.g. GPS, temperature, humidity, UV intensity, etc...) while simultaneously scanning WiFi networks in the area. The data collected is stored in a packet which is transmitted through WiFi via MQTT when a connection is established. The data packet is able to be graphically displayed on a Google Earth map via a KML file. This interaction is handled under the software executable program.
 
 ## Included
 
