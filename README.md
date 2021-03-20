@@ -1,6 +1,8 @@
-# Fitbit Journey Tracker
+# Fitbit Style Journey Tracker
 
-The GeoTracker displays informatioon sent through a microcontroller with various sensors to Google Earth. As the microcontroller moves it collects information about the external environment (e.g. GPS, temperature, humidity, UV intensity, etc...) while simultaneously scanning WiFi networks in the area. The data collected is stored in a packet which is transmitted through WiFi via MQTT when a connection is established. The data packet is able to be graphically displayed on a Google Earth map via a KML file.
+The Fitbit Style Journey Tracker (FSJT) displays informatioon sent through a microcontroller with various sensors to Google Earth. As the microcontroller moves it collects information about the external environment (e.g. GPS, temperature, humidity, UV intensity, etc...) while simultaneously scanning WiFi networks in the area. The data collected is stored in a packet which is transmitted through WiFi via MQTT when a connection is established. MQTT was chosen because it is a lightweight transfer protocol compared to others (e.g. HTTP). The data packet is able to be graphically displayed on a Google Earth map via a KML file.
+
+Fitbit Device (MQTT Client) ----Telemetry Data Packet----> MQTT Broker ----Telemetry Data Packet---->  FSJT (MQTT Client) ----KML----> Google Earth.
 
 ![plot](relativeToGround_example.png)
 
