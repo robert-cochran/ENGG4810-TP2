@@ -1,4 +1,4 @@
-# GeoTracker
+# Fitbit Journey Tracker
 
 The GeoTracker displays informatioon sent through a microcontroller with various sensors to Google Earth. As the microcontroller moves it collects information about the external environment (e.g. GPS, temperature, humidity, UV intensity, etc...) while simultaneously scanning WiFi networks in the area. The data collected is stored in a packet which is transmitted through WiFi via MQTT when a connection is established. The data packet is able to be graphically displayed on a Google Earth map via a KML file.
 
