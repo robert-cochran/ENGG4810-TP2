@@ -1,4 +1,4 @@
-package software;
+package com.app.GeoTracker;
 
 import java.util.ArrayList;
 import java.util.TreeMap;
@@ -23,6 +23,8 @@ public class Start {
    * @throws Exception
    */
   public static void main(String[] args) throws Exception {
+
+    System.out.println("Hello World");
 
     /**
      * To Do: Code saving more than 5 access points GPS Triangulation or multilateration Check all
@@ -72,56 +74,32 @@ public class Start {
      * <p>Packet format [id, time, longitude, latitude, temp, humidity, uv, volt, gps not locked,
      * gps not disabled, wifi ssid, bssid, rssi, crcSum]
      */
-    // KmlCreate kml = new KmlCreate();
-    MqttClient connection = new MqttClient();
-    TreeMap<String, DataPointStruct> dataPointMap = new TreeMap<String, DataPointStruct>();
-    String packetString = "";
-    int i = 0;
-    AccessPoints accessPoints = new AccessPoints();
-    while (true) {
-      Message message = connection.MqttMsgRcv();
-      // null check, if true the empty string is assigned to ignore this message
-      if (message != null) {
-        packetString = new String(message.getPayload());
-      } else packetString = "";
-      System.out.println(i++ + " " + packetString);
-      /** Add's point to the mapping if it is valid */
-      if (packetString.contains("47tp2")) {
-        // creates dataPoint if crcCheck is true
-        if (CRC.crcCheck(packetString)) {
-          DataPointStruct dataPoint = new DataPointStruct(packetString);
-          /**
-           * Wifi Localization 
-           */
-//          if (dataPoint.gpsLock.equals("1") && dataPoint.gpsDisabled.equals("0")) {
-//	           for (int j = 0; j < dataPoint.wifiAccessPoints.size(); j++) {
-//		           AvailableWifi availableWifi = dataPoint.wifiAccessPoints.get(j);
-//		           accessPoints.addAccessPointData(availableWifi.ssid, availableWifi.bssid, availableWifi.rssi, dataPoint.latitude, dataPoint.longitude);
-//	           }
-//           }
-//           else {
-//        	   String[] newGps = accessPoints.estimateCurrentGPS(dataPoint.wifiAccessPoints);
-//        	   if (newGps[0] == "0") {
-//        		   if (dataPoint.gpsDisabled == "1") {
-//	        		   dataPoint.latitude = "No GPS - Gps disabled, localization unavailable";
-//	        		   dataPoint.longitude = "No GPS - Gps disabled, localization unavailable"; 
-//        		   }
-//        		   else {
-//        			   dataPoint.latitude = "No GPS - Gps lock unavailable, localization unavailable";
-//	        		   dataPoint.longitude = "No GPS - Gps lock unavailable, localization unavailable"; 
-//        		   }
-//        	   }
-//           }
-          /**
-           * End Wifi localization
-           */
+    // // KmlCreate kml = new KmlCreate();
+    // MqttClient connection = new MqttClient();
+    // TreeMap<String, DataPointStruct> dataPointMap = new TreeMap<String, DataPointStruct>();
+    // String packetString = "";
+    // int i = 0;
+    // AccessPoints accessPoints = new AccessPoints();
+    // while (true) {
+    //   Message message = connection.MqttMsgRcv();
+    //   // null check, if true the empty string is assigned to ignore this message
+    //   if (message != null) {
+    //     packetString = new String(message.getPayload());
+    //   } else packetString = "";
+    //   System.out.println(i++ + " " + packetString);
+    //   /** Add's point to the mapping if it is valid */
+    //   if (packetString.contains("47tp2")) {
+    //     // creates dataPoint if crcCheck is true
+    //     if (CRC.crcCheck(packetString)) {
+    //       DataPointStruct dataPoint = new DataPointStruct(packetString);
+
           // if this returns null, dataPoint is new
-          if (dataPointMap.put(dataPoint.deviceTime, dataPoint) == null) {
-            dataPointMap = DataHandling.determineSkippedPackets(dataPointMap);
-            FileHandling.writeToFile(dataPointMap);
-          }
-        }
-      }
-    }
+          // if (dataPointMap.put(dataPoint.deviceTime, dataPoint) == null) {
+          //   dataPointMap = DataHandling.determineSkippedPackets(dataPointMap);
+          //   FileHandling.writeToFile(dataPointMap);
+  //         }
+  //       }
+  //     }
+  //   }
   }
 }

@@ -4,7 +4,7 @@ The Fitbit Style Journey Tracker (FSJT) displays informatioon sent through a mic
 
 Fitbit Device (MQTT Client) ----Telemetry Data Packet----> MQTT Broker ----Telemetry Data Packet---->  FSJT (MQTT Client) ----KML----> Google Earth.
 
-![plot](relativeToGround_example.png)
+![plot](example.png)
 
 In the example above the path is dictated by the GPS coordinates collected by the microcontroller as it moves, while the vertical axis is determined by the intensity of the environment variable collected at that specific time. For example, the example image could be displaying the temperature in orange which would be showing very little change during the route.
 
@@ -61,5 +61,53 @@ Link
 
 
 
+
+
+## Running Instructions 
+### Using Simulated MQTT Data
+Git clone the repository
+Open your terminal of choice in the jar file and run "java -jar GeoTracker.jar" 
+This will generate the kml file that will be opened in Google Maps
+
+### Using User-Generated MQTT 
+.... todo
+
+## Java Version
+8?
+
+## Recompiling Instructions
+... todo
+
+
+
+## Example Data
+Test packets to run with mqtt.fx and show it does read. 
+Please just smash that 'publish' button to send as many times as possible (duplicates are ignored). 
+Feel free to send them in any order, it will auto order them.
+For some reason it doesn't respond to small amounts of packets.
+I have included a few test packets that can be sent from a mqtt spy program (mqtt.fx is what i used)
+
+
+Start with no gps lock
+47tp2,13:30:11,S2749.9950,E15301.6854,026,077,1,08.9,0,0,\r\naxon29,00-14-22-01-23-45,085,c726
+	
+then gps lock
+47tp2,13:30:15,S2750.0361,E15301.6535,036,080,0,07.7,1,0,axon29,00-14-22-01-23-45,073,eduroam,00-14-22-01-23-43,075,uqwifi,00-14-22-01-23-41,072,854
+	
+gps no lock
+47tp2,13:30:16,S2749.9950,E15301.6854,026,099,1,08.9,0,0,\r\naxon29,00-14-22-01-23-45,085,8d5e
+	
+gps lock
+47tp2,13:30:17,S2749.9950,E15301.6854,026,077,1,08.9,1,0,\r\naxon29,00-14-22-01-23-45,085,892d
+
+gps lock
+47tp2,13:30:19,S2750.0172,E15301.6695,029,078,0,08.4,1,0,\r\naxon29,00-14-22-01-23-45,075,54c8
+
+gps no lock
+47tp2,13:30:20,S2750.0455,E15301.7000,036,050,0,07.7,0,0,\r\naxon29,00-14-22-01-23-45,073,352
+
+invalid packets
+	bad checksum
+47tp2,13:30:20,S2750.0455,E15301.7000,036,080,0,07.7,1,0,\r\naxon29,00-14-22-01-23-45,073,ba4e
 
 
